@@ -1,0 +1,1900 @@
+zabbix_export:
+  version: '6.0'
+  date: '2023-12-25T13:10:33Z'
+  groups:
+    -
+      uuid: 56d6f362d6df40e4b059f43bb015aae4
+      name: Templates/OLT
+  templates:
+    -
+      uuid: e19ae3e525b74c23af5a43103aeb0238
+      template: 'Cloud - FiberHome 2.0'
+      name: 'Cloud - FiberHome 2.0'
+      templates:
+        -
+          name: 'Template Module Generic SNMPv2'
+      groups:
+        -
+          name: Templates/OLT
+      items:
+        -
+          uuid: 31d61c02e4eb4c3da320bda0b08c98fd
+          name: 'Memory utilization slot 1'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.1
+          key: 'memoria_slot1[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 7fa7b0b578dc4b4ab5924e49d380c863
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot1[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 1 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: b7a1ac31a3e645539cf1fbff2470c84e
+          name: 'Memory utilization slot 2'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.2
+          key: 'memoria_slot2[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: c28a86907dd346b9a2ebb58238ce55f6
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot2[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 2 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 86d4e91e8d294c179aae48b427b21e58
+          name: 'Memory utilization slot 3'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.3
+          key: 'memoria_slot3[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: abd53acddf924ade9104b9252f16b8bb
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot3[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 3 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 5b5df7b83947407dafb9b50d6ae5b009
+          name: 'Memory utilization slot 4'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.4
+          key: 'memoria_slot4[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 9e84c8c4a1c24e3a82246e06158ae936
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot4[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 4 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 370cb970d77840f9bf2d5994e7e8e73c
+          name: 'Memory utilization slot 5'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.5
+          key: 'memoria_slot5[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 9941c36a8b55489f8095be8f69c91194
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot5[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 5 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 40e1710b9abd4f0fa7a1e9418216c892
+          name: 'Memory utilization slot 6'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.6
+          key: 'memoria_slot6[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: d9cb1894f94d49e2bc3c0548cefaf5fe
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot6[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 6 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 542226b4a337426588566b55eef35df6
+          name: 'Memory utilization slot 7'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.7
+          key: 'memoria_slot7[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 5a1d7f6f81be44bcb229ba978aab9de2
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot7[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 7 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 1f33f02be7754a13bebc83f61ddbb1a1
+          name: 'Memory utilization slot 8'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.8
+          key: 'memoria_slot8[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: eef8f89026fc4d1ba159a9f4564add81
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot8[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 8 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 34b451409527438bb8899d4d9ca4b433
+          name: 'Memory utilization slot 9'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.9
+          key: 'memoria_slot9[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 3cc297767a614ec6b0ff370aec4351d4
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot9[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 9 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 097536bde1fb4b09b9bb980fed86f425
+          name: 'Memory utilization slot 10'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.10
+          key: 'memoria_slot10[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: b02580433db7442f86030bb38e690332
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot10[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 10 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 61a6fce0b26648a2a6c6f1f6ea3931f5
+          name: 'Memory utilization slot 11'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.11
+          key: 'memoria_slot11[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 34412891daa3452a9b80300ecc1af011
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot11[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 11 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: acd290c49b244c9a81ae8ae7bd28e0e5
+          name: 'Memory utilization slot 12'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.12
+          key: 'memoria_slot12[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: fb192fe7b03247009282a2cd8049c4cf
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot12[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 12 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 40030cfe0afb49619a376ec4bba35f18
+          name: 'Memory utilization slot 13'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.13
+          key: 'memoria_slot13[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 21af8bfbca714383bf1fc972824f95ad
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot13[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 13 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: f0f4ce727f4045b9bf9d813415d43b81
+          name: 'Memory utilization slot 14'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.14
+          key: 'memoria_slot14[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 4b334c5aeb9a4f24a819943da3176c60
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot14[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 14 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: a69903a205c945cd81c244e107f0a9c4
+          name: 'Memory utilization slot 15'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.15
+          key: 'memoria_slot15[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 0da8666b83da45aca581da2d3da66778
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot15[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 15 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: c861954989214de580c37986fcc1cc15
+          name: 'Memory utilization slot 16'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.16
+          key: 'memoria_slot16[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 1d44bb9780934d51ad4412376d1ff7c9
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot16[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 16 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 1adaad13befe4690bbffab78c5fb0fa2
+          name: 'Memory utilization slot 17'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.17
+          key: 'memoria_slot17[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 668554448d5d4702980a33980202cdd5
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot17[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 17 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 0e8df42d3dc145fdbc2368a80ec35600
+          name: 'Memory utilization slot 18'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.9.18
+          key: 'memoria_slot18[mem]'
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: memoria
+          triggers:
+            -
+              uuid: 19f406fa01b64f91b5ee11adec1fda68
+              expression: 'last(/Cloud - FiberHome 2.0/memoria_slot18[mem])>=90'
+              name: 'USO DE MEMÓRIA NO SLOT 18 ACIMA DE 90%'
+              priority: AVERAGE
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: f8a2f028dfd64821ac6ea76b598db7a4
+          name: 'USO DE CPU'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.8.1.1.5.9
+          key: MTxCPU
+          delay: 2m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: temperatura
+        -
+          uuid: 41638718cfb24db28824eae55cf3f7cb
+          name: Memoria
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.8.1.1.6.9
+          key: MTxMEMORIA
+          history: 30d
+          trends: 90d
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: temperatura
+        -
+          uuid: c47cec1adaf345468e71592dcada4dc7
+          name: 'CPU UTILIZADA SLOT 1'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.1
+          key: 'olt_slot1[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: d4bca028b4c542b4ac0760b8cec22d47
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot1[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 1 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: b72cf142b6414b5c8ac1b1998b8c332e
+          name: 'CPU UTILIZADA SLOT 2'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.2
+          key: 'olt_slot2[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: ec3e07a8d08b4b978615a077e08f133e
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot2[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 2 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 0cb2e620b33b4b89ad732be24ccbd5cd
+          name: 'CPU UTILIZADA SLOT 3'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.3
+          key: 'olt_slot3[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 47ede385b84c4887a00a36a367022824
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot3[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 3 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: f6f12c343b01438d9f74ce3f7f45f395
+          name: 'CPU UTILIZADA SLOT 4'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.4
+          key: 'olt_slot4[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: b95fc0413d9c4a23bc1f10a930e2f33d
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot4[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 4 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: ba14bb27e0d4429c9752339f894d61dc
+          name: 'CPU UTILIZADA SLOT 5'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.5
+          key: 'olt_slot5[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 73cfc75e13cd475183be579a340daa10
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot5[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 5 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 1ae8a7fd20204b1781886ef2fde2187a
+          name: 'CPU UTILIZADA SLOT 6'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.6
+          key: 'olt_slot6[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 4d435dfe5dfa4f68b6fde6cb5935df8e
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot6[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 6 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 5a21b717375749228e4a37969a54c237
+          name: 'CPU UTILIZADA SLOT 7'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.7
+          key: 'olt_slot7[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 0a5cf69e81bf4f0fa38f48c016c1073d
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot7[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 7 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: b2ce30096a804006b9a5853871924d7c
+          name: 'CPU UTILIZADA SLOT 8'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.8
+          key: 'olt_slot8[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: a18e31f38538451d913587ae9b3af467
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot8[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 8 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 8bbf9266e8494f7aa04bce1f5cc993fb
+          name: 'CPU UTILIZADA SLOT 9'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.9
+          key: 'olt_slot9[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 1ca3580ac29946c29b84262ee3571491
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot9[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 9 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: d8cf45fa34f74e57982e5ae401ec6484
+          name: 'CPU UTILIZADA SLOT 10'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.10
+          key: 'olt_slot10[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 71cb0d1e40254fecae04db03bcf2d062
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot10[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 10 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: a230499cd10644ecbef0907ee7938a1f
+          name: 'CPU UTILIZADA SLOT 11'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.11
+          key: 'olt_slot11[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: b530608de63a4a829b87c6de2c809b69
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot11[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 11 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: f1871a3af5004ac98950e7ef211b4d24
+          name: 'CPU UTILIZADA SLOT 12'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.12
+          key: 'olt_slot12[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 03a1f86a96cf4e519c47a1e16a3104d7
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot12[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 12 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: b5809b568bbc45e1b7edb748fcf8adf0
+          name: 'CPU UTILIZADA SLOT 13'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.13
+          key: 'olt_slot13[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 104b39ea2d814c05b8684e8de9a1d213
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot13[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 13 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 3c198108a5804efea5e47edac6b823f0
+          name: 'CPU UTILIZADA SLOT 14'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.14
+          key: 'olt_slot14[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 4140690c72994d9b8a3d47cf8082aef2
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot14[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 14 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: de6155dc7bba4e78a1d21b4d1d1449ac
+          name: 'CPU UTILIZADA SLOT 15'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.15
+          key: 'olt_slot15[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 419c3bb49c4d4a61816ac226e714b501
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot15[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 15 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 59bc131727174a11a387955359419029
+          name: 'CPU UTILIZADA SLOT 16'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.16
+          key: 'olt_slot16[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: f015fe48cdab4dd2aab92d287a1bbeeb
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot16[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 16 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: e966e0db21504001af835222c0311d78
+          name: 'CPU UTILIZADA SLOT 17'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.17
+          key: 'olt_slot17[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: 2c1a45872db04a1bb8d11b7dfb578f5c
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot17[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 17 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: f8fd64526b3347b4acc80905cca35fdf
+          name: 'CPU UTILIZADA SLOT 18'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.2.1.1.8.18
+          key: 'olt_slot18[cpu]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: CPU
+          triggers:
+            -
+              uuid: a70b7a5e14ee4ac2855cd0e59b205208
+              expression: 'last(/Cloud - FiberHome 2.0/olt_slot18[cpu])>=90'
+              name: 'USO DE CPU NO SLOT 18 ACIMA DE 90%'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: 55b379a3f72e49b2be9bf73ba6dd16c0
+          name: 'ONUs SEM ENERGIA'
+          type: DEPENDENT
+          key: onu.energia
+          delay: '0'
+          history: 30d
+          trends: 90d
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - |
+                  function qtd_clientes(json,status){
+                       var count=0;
+                       for (var index in json){
+                         var statusONU = json[index]["{#STATUS}"];
+                         
+                         if (statusONU == status){
+                           count+=1;
+                         }
+                       }
+                       return count;
+                  }
+                  
+                  var file = JSON.parse(value);
+                  /* {#STATUS} 1 - UP | 0 - DOWN | -1 - INVALID */
+                  var json = qtd_clientes(file,3);
+                  return JSON.stringify(json);
+          master_item:
+            key: qtd.onu
+          tags:
+            -
+              tag: Application
+              value: 'TOTAIS ONUs'
+        -
+          uuid: b443816e0b9e45758a7147f1c2b6eacb
+          name: 'ONUs COM FALHA'
+          type: DEPENDENT
+          key: onu.falha
+          delay: '0'
+          history: 30d
+          trends: 90d
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - |
+                  function qtd_clientes(json,status){
+                       var count=0;
+                       for (var index in json){
+                         var statusONU = json[index]["{#STATUS}"];
+                         
+                         if (statusONU == status){
+                           count+=1;
+                         }
+                       }
+                       return count;
+                  }
+                  
+                  var file = JSON.parse(value);
+                  /* {#STATUS} 1 - UP | 0 - DOWN | -1 - INVALID */
+                  var json = qtd_clientes(file,0);
+                  return JSON.stringify(json);
+          master_item:
+            key: qtd.onu
+          tags:
+            -
+              tag: Application
+              value: 'TOTAIS ONUs'
+        -
+          uuid: 2833478f27f64c8e818c474556bddd30
+          name: 'ONUs OFFLINE'
+          type: DEPENDENT
+          key: onu.offline
+          delay: '0'
+          history: 30d
+          trends: 90d
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - |
+                  function qtd_clientes(json,status){
+                       var count=0;
+                       for (var index in json){
+                         var statusONU = json[index]["{#STATUS}"];
+                         
+                         if (statusONU == status){
+                           count+=1;
+                         }
+                       }
+                       return count;
+                  }
+                  
+                  var file = JSON.parse(value);
+                  /* {#STATUS} 1 - UP | 0 - DOWN | -1 - INVALID */
+                  var json = qtd_clientes(file,2);
+                  return JSON.stringify(json);
+          master_item:
+            key: qtd.onu
+          tags:
+            -
+              tag: Application
+              value: 'TOTAIS ONUs'
+        -
+          uuid: 0a9956368b1a48d6a24c007925af7c5a
+          name: 'ONUs ONLINE'
+          type: DEPENDENT
+          key: onu.online
+          delay: '0'
+          history: 30d
+          trends: 90d
+          preprocessing:
+            -
+              type: JAVASCRIPT
+              parameters:
+                - |
+                  function qtd_clientes(json,status){
+                       var count=0;
+                       for (var index in json){
+                         var statusONU = json[index]["{#STATUS}"];
+                         
+                         if (statusONU == status){
+                           count+=1;
+                         }
+                       }
+                       return count;
+                  }
+                  
+                  var file = JSON.parse(value);
+                  /* {#STATUS} 1 - UP | 0 - DOWN | -1 - INVALID */
+                  var json = qtd_clientes(file,1);
+                  return JSON.stringify(json);
+          master_item:
+            key: qtd.onu
+          tags:
+            -
+              tag: Application
+              value: 'TOTAIS ONUs'
+        -
+          uuid: aa7d7d760a364bbc828a0b78e63aee0a
+          name: 'TOTAL DE ONU'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.4.6.0
+          key: onuCount
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: 'TOTAIS ONUs'
+        -
+          uuid: 94015716b7774ff38eab8f0dc52ba576
+          name: 'Contador por PON (JSON)'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#SLOT},1.3.6.1.4.1.5875.800.3.10.1.1.2,{#PON},1.3.6.1.4.1.5875.800.3.10.1.1.3,{#STATUS},1.3.6.1.4.1.5875.800.3.10.1.1.11]'
+          key: onuStatus
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: CONT-PON
+        -
+          uuid: 58b6e6b592fc4ce4b4ab99f8e9fdbac7
+          name: 'QUANTIDADE ONUS'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#STATUS}, 1.3.6.1.4.1.5875.800.3.10.1.1.11]'
+          key: qtd.onu
+          delay: 3m
+          trends: '0'
+          value_type: TEXT
+          tags:
+            -
+              tag: Application
+              value: ONU-GERAL
+        -
+          uuid: 750af2b363a745ce9d548e346024a013
+          name: 'Status slot 1'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.1
+          key: 'status_slot1[slot1]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 8099cb4258a64d18ad415e0e4dff79b7
+          name: 'Status slot 2'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.2
+          key: 'status_slot1[slot2]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: b97ff374f3f9419185513cb9abb39f7b
+          name: 'Status slot 3'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.3
+          key: 'status_slot1[slot3]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: b859a57c56264bd389f0f8ab0d66cb90
+          name: 'Status slot 4'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.4
+          key: 'status_slot1[slot4]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: e9d9c0d0b78e4d3abe4c14bb8ceddef0
+          name: 'Status slot 5'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.5
+          key: 'status_slot1[slot5]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: aaaed36f59dc46b9bb15d04b0fb81121
+          name: 'Status slot 6'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.6
+          key: 'status_slot1[slot6]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 97ae3f8a7db743d389aaaf9c47185f88
+          name: 'Status slot 7'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.7
+          key: 'status_slot1[slot7]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 0efe6d6303be43f1a85d02b1fb51982f
+          name: 'Status slot 8'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.8
+          key: 'status_slot1[slot8]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 1d5b8bca1fe3478cbb9b0e73b176efb4
+          name: 'Status slot 9'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.9
+          key: 'status_slot1[slot9]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: ea128942a5324fdcb76b123c7968983a
+          name: 'Status slot 10'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.10
+          key: 'status_slot1[slot10]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: deaaa5c2626e4ee198f15d952cd3e8b6
+          name: 'Status slot 11'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.11
+          key: 'status_slot1[slot11]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 47eb3357aebc4dd2a32b28faa312cda6
+          name: 'Status slot 12'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.12
+          key: 'status_slot1[slot12]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 124d26fc17fa4526a1c3b3c81b9c5c54
+          name: 'Status slot 13'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.13
+          key: 'status_slot1[slot13]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 2001c4954e964d25a1083fc6c40d5585
+          name: 'Status slot 14'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.14
+          key: 'status_slot1[slot14]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: d8f0a71e59a0462185661b5ceeb63af9
+          name: 'Status slot 15'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.15
+          key: 'status_slot1[slot15]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 9fa7d74f6bf6440ba64d67ea6b290ea5
+          name: 'Status slot 18'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.18
+          key: 'status_slot1[slot18]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 0122e77f6e7d4c6db4ff00882d8e632f
+          name: 'Status slot 16'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.16
+          key: 'status_slot16[slot16]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: 442efef9d617427a8c7470979c8aec55
+          name: 'Status slot 17'
+          type: SNMP_AGENT
+          snmp_oid: .1.3.6.1.4.1.5875.800.3.9.2.1.1.5.17
+          key: 'status_slot17[slot17]'
+          delay: 3m
+          history: 30d
+          trends: 90d
+          tags:
+            -
+              tag: Application
+              value: status-olt
+        -
+          uuid: beaac1edfd594321a7a668d5fd640bb3
+          name: Temperatura
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.4.5.0
+          key: Temp
+          delay: 2m
+          history: 30d
+          trends: 90d
+          units: °C
+          tags:
+            -
+              tag: Application
+              value: temperatura
+          triggers:
+            -
+              uuid: b2d0f569c7444bbab0fd0012871d80e2
+              expression: 'last(/Cloud - FiberHome 2.0/Temp)>=48'
+              recovery_mode: RECOVERY_EXPRESSION
+              recovery_expression: 'last(/Cloud - FiberHome 2.0/Temp)<=46'
+              name: 'A temperatura está acima de 48 Graus'
+              priority: HIGH
+              tags:
+                -
+                  tag: TEMPERATURA
+        -
+          uuid: 56440c44876b40e0840849dbd5cc9cb1
+          name: 'USO CPU - HSWA 8'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.8.1.1.5.8
+          key: total.cpu8
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: PLACA-GERENCIA-CPU
+          triggers:
+            -
+              uuid: 7dac5cd2d8804629a15170a81e13ab52
+              expression: 'last(/Cloud - FiberHome 2.0/total.cpu8)>90'
+              recovery_mode: RECOVERY_EXPRESSION
+              recovery_expression: 'last(/Cloud - FiberHome 2.0/total.cpu8)<=89'
+              name: 'USO DE CPU ALTA NA PLACA HSWA 8'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: f4355fa73c5c40e9865504d60ddb216d
+          name: 'USO CPU - HSWA 9'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.8.1.1.5.9
+          key: total.cpu9
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: PLACA-GERENCIA-CPU
+          triggers:
+            -
+              uuid: 17dc9fc088514a1b9a6d18c58e895e93
+              expression: 'last(/Cloud - FiberHome 2.0/total.cpu9)>90'
+              recovery_mode: RECOVERY_EXPRESSION
+              recovery_expression: 'last(/Cloud - FiberHome 2.0/total.cpu9)<=89'
+              name: 'USO DE CPU ALTA NA PLACA HSWA 9'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+        -
+          uuid: b7d8c37a83a24db48c2273fe6308c7dc
+          name: 'USO CPU - HSWA 10'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.5875.800.3.9.8.1.1.5.10
+          key: total.cpu10
+          history: 30d
+          trends: 90d
+          units: '%'
+          preprocessing:
+            -
+              type: MULTIPLIER
+              parameters:
+                - '0.01'
+          tags:
+            -
+              tag: Application
+              value: PLACA-GERENCIA-CPU
+          triggers:
+            -
+              uuid: e9958bcd738f48eab0b9d2a2fe057c99
+              expression: 'last(/Cloud - FiberHome 2.0/total.cpu10)>90'
+              recovery_mode: RECOVERY_EXPRESSION
+              recovery_expression: 'last(/Cloud - FiberHome 2.0/total.cpu10)<=89'
+              name: 'USO DE CPU ALTA NA PLACA HSWA 10'
+              priority: WARNING
+              tags:
+                -
+                  tag: DEVICE_OFF
+      discovery_rules:
+        -
+          uuid: f3d72456456d49c889771b12d569fbd3
+          name: ONUs
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFSERIAL},.1.3.6.1.4.1.5875.800.3.10.1.1.10]'
+          key: AuthOnuListMac
+          delay: 2h
+          status: DISABLED
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: e7fb33cf493a4dcfb1c6a6f65410bf12
+              name: '{#IFSERIAL}'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.5875.800.3.9.3.3.1.6.{#SNMPINDEX}'
+              key: 'OnuPonRxOpticalPower[{#IFSERIAL}]'
+              delay: 1h
+              history: 30d
+              trends: 90d
+              value_type: FLOAT
+              units: dBm
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '0.01'
+              tags:
+                -
+                  tag: Application
+                  value: ONU
+              trigger_prototypes:
+                -
+                  uuid: 15109c793fa74b59a71e251a40d7c6df
+                  expression: 'avg(/Cloud - FiberHome 2.0/OnuPonRxOpticalPower[{#IFSERIAL}],1h)<=-27'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Cloud - FiberHome 2.0/OnuPonRxOpticalPower[{#IFSERIAL}])<-5'
+                  name: '{#IFSERIAL} - SINAL ALTO'
+                  priority: AVERAGE
+        -
+          uuid: 7c9f2f7f5ac74bbfb2d526fb0106b3de
+          name: 'Network interfaces PON'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFADMINSTATUS},1.3.6.1.2.1.2.2.1.7,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]'
+          key: nxet.if.discovery
+          delay: 6h
+          filter:
+            conditions:
+              -
+                macro: '{#IFNAME}'
+                value: 'PON\s\d{1,2}\/\d{1,2}$'
+                formulaid: A
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: b8ba9e497e53487c8b4a855035ccdf3a
+              name: 'Trafego de Entrada na Interface {#IFNAME}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}'
+              key: 'net.if.in[ifHCInOctets.{#SNMPINDEX}]'
+              delay: 10m
+              history: 30d
+              trends: 90d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: Network
+            -
+              uuid: 08d145d6fd3242d9b68ad9baba6c68fd
+              name: 'Trafego de Saida na Interface {#IFNAME}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}'
+              key: 'net.if.out[ifHCOutOctets.{#SNMPINDEX}]'
+              delay: 10m
+              history: 30d
+              trends: 90d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: Network
+            -
+              uuid: 09ecbf8ae51f46eb8338b57daa52d2f4
+              name: '{#IFNAME}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}'
+              key: 'net.if.status[ifOperStatus.{#SNMPINDEX}]'
+              history: 30d
+              trends: 90d
+              valuemap:
+                name: INFERTACEPON
+              tags:
+                -
+                  tag: Application
+                  value: Net_status
+              trigger_prototypes:
+                -
+                  uuid: 9a3e9bcdfccb42a4acad9ecb4d550551
+                  expression: 'last(/Cloud - FiberHome 2.0/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Cloud - FiberHome 2.0/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Cloud - FiberHome 2.0/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Cloud - FiberHome 2.0/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2'
+                  name: 'Interface {#IFNAME}: Link down'
+                  priority: AVERAGE
+                  tags:
+                    -
+                      tag: PORTA_OFF_PON
+        -
+          uuid: fefd52cc22b841f7b4db5f3c83aa69f6
+          name: 'Network interfaces XFP/SFP'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFADMINSTATUS},1.3.6.1.2.1.2.2.1.7,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]'
+          key: nxet.if.discovery.SFP
+          delay: 6h
+          filter:
+            conditions:
+              -
+                macro: '{#IFNAME}'
+                value: 'XFP\s\d{1,2}\/\d{1,2}$'
+                formulaid: A
+              -
+                macro: '{#IFNAME}'
+                value: 'SFP\s\d{1,2}\/\d{1,2}$'
+                formulaid: B
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 525267a479f04ceaaf1cae96a1e5c0d3
+              name: 'Trafego de Entrada na Interface {#IFNAME}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}'
+              key: 'neeet.if.in[ifHCInOctets.{#SNMPINDEX}]'
+              delay: 3m
+              history: 30d
+              trends: 90d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: Network
+            -
+              uuid: 948a7da0a8fa4ed4aa7ad4041d9a7315
+              name: 'Trafego de Saida na Interface {#IFNAME}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}'
+              key: 'neeet.if.out[ifHCOutOctets.{#SNMPINDEX}]'
+              delay: 3m
+              history: 30d
+              trends: 90d
+              units: bps
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '8'
+                -
+                  type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              tags:
+                -
+                  tag: Application
+                  value: Network
+            -
+              uuid: 500a67ebb3864252bcf9a073efec2a1c
+              name: '{#IFNAME}'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}'
+              key: 'neeet.if.status[ifOperStatus.{#SNMPINDEX}]'
+              history: 30d
+              trends: 90d
+              tags:
+                -
+                  tag: Application
+                  value: Net_status
+              trigger_prototypes:
+                -
+                  uuid: 3337eee99b3a4ebd9a109748016436cf
+                  expression: 'last(/Cloud - FiberHome 2.0/neeet.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Cloud - FiberHome 2.0/neeet.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Cloud - FiberHome 2.0/neeet.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Cloud - FiberHome 2.0/neeet.if.status[ifOperStatus.{#SNMPINDEX}])<>2'
+                  name: 'Interface {#IFNAME}: Link down'
+                  priority: WARNING
+                  tags:
+                    -
+                      tag: PORTA_OFF_XFP
+        -
+          uuid: 44fe89b426ae4b5ba91a0b01fef9de35
+          name: 'Portas PON'
+          type: SNMP_AGENT
+          snmp_oid: 'discovery[{#OLTPONNAME},.1.3.6.1.4.1.5875.800.3.9.3.4.1.2,{#IFPONSPEED},1.3.6.1.4.1.5875.800.3.9.3.4.1.6]'
+          key: oltPonName
+          delay: 1h
+          lifetime: 3d
+          item_prototypes:
+            -
+              uuid: 5ec9ef453ec649538cbba74735b61953
+              name: '{#OLTPONNAME}: Total de ONUs autorizadas'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.5875.800.3.9.3.4.1.12.{#SNMPINDEX}'
+              key: 'GEPON-OLT-COMMON-MIB.oltPonAuthOnuNum.[{#SNMPINDEX}]'
+              delay: 30m
+              history: 30d
+              trends: 90d
+              tags:
+                -
+                  tag: Application
+                  value: AUTENTICADAS_PON
+            -
+              uuid: 8cb3accdb7a04ab6aa60accac1ff579c
+              name: '{#OLTPONNAME}: Total de ONUs offline'
+              type: DEPENDENT
+              key: 'GEPON-OLT-COMMON-MIB[onuStatus!=1,{#OLTPONNAME}]'
+              delay: '0'
+              history: 30d
+              trends: 90d
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$..[?(@[''{#SLOT}''] == ''{{#OLTPONNAME}.regsub("PON\s(\d+)\/(\d+)", \1)}'' && @[''{#PON}''] == ''{{#OLTPONNAME}.regsub("PON\s(\d+)\/(\d+)", \2)}'' && @[''{#STATUS}''] != ''1'')].length()'
+              master_item:
+                key: onuStatus
+              tags:
+                -
+                  tag: Application
+                  value: OFFLINE_PON
+            -
+              uuid: 19d1a9a6f7a940418a8b704c080cc4f6
+              name: '{#OLTPONNAME}: Total de ONUs online'
+              type: DEPENDENT
+              key: 'GEPON-OLT-COMMON-MIB[onuStatus=1,{#OLTPONNAME}]'
+              delay: '0'
+              history: 30d
+              trends: 90d
+              preprocessing:
+                -
+                  type: JSONPATH
+                  parameters:
+                    - '$..[?(@[''{#SLOT}''] == ''{{#OLTPONNAME}.regsub("PON\s(\d+)\/(\d+)", \1)}'' && @[''{#PON}''] == ''{{#OLTPONNAME}.regsub("PON\s(\d+)\/(\d+)", \2)}'' && @[''{#STATUS}''] == ''1'')].length()'
+              master_item:
+                key: onuStatus
+              tags:
+                -
+                  tag: Application
+                  value: ONLINE_PON
+            -
+              uuid: 908e86de8f1c4e4c9dc40daf57c4c73d
+              name: '{#OLTPONNAME}: Temperatura do GBIC'
+              type: SNMP_AGENT
+              snmp_oid: '1.3.6.1.4.1.5875.800.3.9.3.4.1.11.{#SNMPINDEX}'
+              key: 'oltPonOpticalTemperature.[{#SNMPINDEX}]'
+              delay: 15m
+              history: 30d
+              trends: 90d
+              units: ºC
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '0.01'
+              tags:
+                -
+                  tag: Application
+                  value: TEMPERATURA_PON
+            -
+              uuid: 00d15e2b9cd14904ad5ef70fb189d615
+              name: '{#OLTPONNAME}: Potencia de saida da porta'
+              type: SNMP_AGENT
+              snmp_oid: '.1.3.6.1.4.1.5875.800.3.9.3.4.1.8.{#SNMPINDEX}'
+              key: 'oltPonTxOpticalPower.[{#SNMPINDEX}]'
+              delay: 15m
+              history: 30d
+              trends: 90d
+              value_type: FLOAT
+              units: dBm
+              preprocessing:
+                -
+                  type: MULTIPLIER
+                  parameters:
+                    - '0.01'
+              tags:
+                -
+                  tag: Application
+                  value: POTENCIA_PON
+          trigger_prototypes:
+            -
+              uuid: 10cf1c322df74752ae94cbfcd3280ab5
+              expression: 'last(/Cloud - FiberHome 2.0/GEPON-OLT-COMMON-MIB.oltPonAuthOnuNum.[{#SNMPINDEX}])>3 and last(/Cloud - FiberHome 2.0/GEPON-OLT-COMMON-MIB[onuStatus=1,{#OLTPONNAME}])<3 and last(/Cloud - FiberHome 2.0/GEPON-OLT-COMMON-MIB[onuStatus!=1,{#OLTPONNAME}])>3'
+              name: 'Queda de ONUs detectada no slot {{#OLTPONNAME}.regsub("PON\s(\d+)\/(\d+)", \1)} PON {{#OLTPONNAME}.regsub("PON\s(\d+)\/(\d+)", \2)}'
+              priority: WARNING
+              tags:
+                -
+                  tag: QUEDA_PON
+      valuemaps:
+        -
+          uuid: bc98ee64d59a48818384b0ed7d9d2ca0
+          name: INFERTACEPON
+          mappings:
+            -
+              value: '1'
+              newvalue: UP
+            -
+              value: '2'
+              newvalue: DOWN
